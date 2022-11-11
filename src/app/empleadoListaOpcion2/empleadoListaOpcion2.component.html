@@ -1,0 +1,13 @@
+<p >
+  {{empleado.nombre}}
+  {{empleado.apellido}}
+  {{empleado.puesto}}
+  {{empleado.salario}}
+</p>
+
+<app-empleadoCaracteristicas (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-empleadoCaracteristicas>
+<ul>
+  <li *ngFor="let caracteristica of arrayCaracteristicas">
+    {{caracteristica}}
+  </li>
+</ul>

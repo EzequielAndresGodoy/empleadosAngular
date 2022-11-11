@@ -6,9 +6,14 @@
   <button type="submit" (click)="registrarEmpleado()">Enviar</button>
 </form>
 
-<p *ngFor="let empleado of empleados">
-  {{empleado.nombre}}
-  {{empleado.apellido}}
-  {{empleado.puesto}}
-  {{empleado.salario}}
-</p>
+<h2>2 Hijos que imprimen la lista de distinta manera</h2>
+
+<h3>Hijo opcion 1 </h3>
+<app-empleadoLista [empleados]="empleados"></app-empleadoLista>
+
+<h3>Hijo opcion 2 </h3>
+<app-empleadoListaOpcion2 
+  *ngFor="let empleado of empleados" 
+  [empleado]="empleado"
+  ></app-empleadoListaOpcion2>
+
