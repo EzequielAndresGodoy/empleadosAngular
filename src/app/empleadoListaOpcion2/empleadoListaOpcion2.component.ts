@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { empleado } from '../empleado.model';
+import { ServicioEmpleadosService } from '../servicio-empleados.service';
 
 @Component({
   selector: 'app-empleadoListaOpcion2',
@@ -12,12 +13,13 @@ export class EmpleadoListaOpcion2Component implements OnInit {
 
   arrayCaracteristicas:string[] = [];
 
-  constructor() { }
+  constructor(private miServicio: ServicioEmpleadosService) { }
 
   ngOnInit() {
   }
 
   agregarCaracteristica(caracteristica: string){
+    this.miServicio.muestraMensaje(caracteristica)
     this.arrayCaracteristicas.push(caracteristica)
   }
 
