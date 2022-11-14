@@ -22,4 +22,14 @@ export class EmpleadosService{
     this.empleados.push(empleado)
   }
 
+  encontrarEmpleado(indice:number) {
+    return this.empleados[indice]
+  }
+
+  actualizarEmpleado(empleado: empleado, indice: number){
+
+    this.empleados[indice] = empleado
+
+  }
+
 }

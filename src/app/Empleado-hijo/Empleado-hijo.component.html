@@ -1,8 +1,11 @@
 <p >
-  {{empleado.nombre}}
-  {{empleado.apellido}}
-  {{empleado.puesto}}
-  {{empleado.salario}}
+  <a [routerLink]="['/actualiza',indice]">
+    {{indice+1}}
+    {{empleado.nombre}}
+    {{empleado.apellido}}
+    {{empleado.puesto}}
+    {{empleado.salario}}
+  </a>
 </p>
 
 <app-CaracteristicasEmpleado (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-CaracteristicasEmpleado>

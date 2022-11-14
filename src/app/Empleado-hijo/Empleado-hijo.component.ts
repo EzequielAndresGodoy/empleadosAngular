@@ -10,6 +10,7 @@ import { ServicioEmpleadosService } from '../servicio-empleados.service';
 export class EmpleadoHijoComponent implements OnInit {
 
   @Input() empleado:empleado;
+  @Input() indice:number;
 
   arrayCaracteristicas:string[] = [];
 

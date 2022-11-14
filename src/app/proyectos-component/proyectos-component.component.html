@@ -1,1 +1,15 @@
 <p>proyectos-component works!</p>
+
+<form>
+  <input type="text" name="nombre" id="" [(ngModel)]="nombre">
+  <input type="text" name="apellido" id="" [(ngModel)]="apellido">
+  <input type="text" name="puesto" id="" [(ngModel)]="puesto">
+  <input type="number" name="salario" id="" [(ngModel)]="salario">
+  <button type="submit" (click)="registrarEmpleado()">Enviar</button>
+</form>
+
+<div style="text-align: center;">
+  <button class="btn btn-primary mt-5" (click)="volverHome()">
+    Volver
+  </button>
+</div>
