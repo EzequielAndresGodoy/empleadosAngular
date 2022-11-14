@@ -5,7 +5,7 @@
   {{empleado.salario}}
 </p>
 
-<app-empleadoCaracteristicas (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-empleadoCaracteristicas>
+<app-CaracteristicasEmpleado (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-CaracteristicasEmpleado>
 <ul>
   <li *ngFor="let caracteristica of arrayCaracteristicas">
     {{caracteristica}}

@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-empleadoCaracteristicas',
-  templateUrl: './empleadoCaracteristicas.component.html',
-  styleUrls: ['./empleadoCaracteristicas.component.css']
+  selector: 'app-CaracteristicasEmpleado',
+  templateUrl: './Caracteristicas-empleado.component.html',
+  styleUrls: ['./Caracteristicas-empleado.component.css']
 })
-export class EmpleadoCaracteristicasComponent implements OnInit {
+export class CaracteristicasEmpleadoComponent implements OnInit {
 
   @Output() caracteristicasEmpleados = new EventEmitter<string>();
 

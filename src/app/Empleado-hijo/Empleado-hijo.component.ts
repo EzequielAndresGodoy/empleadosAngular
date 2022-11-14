@@ -3,11 +3,11 @@ import { empleado } from '../empleado.model';
 import { ServicioEmpleadosService } from '../servicio-empleados.service';
 
 @Component({
-  selector: 'app-empleadoListaOpcion2',
-  templateUrl: './empleadoListaOpcion2.component.html',
-  styleUrls: ['./empleadoListaOpcion2.component.css']
+  selector: 'app-EmpleadoHijo',
+  templateUrl: './Empleado-hijo.component.html',
+  styleUrls: ['./Empleado-hijo.component.css']
 })
-export class EmpleadoListaOpcion2Component implements OnInit {
+export class EmpleadoHijoComponent implements OnInit {
 
   @Input() empleado:empleado;
 
