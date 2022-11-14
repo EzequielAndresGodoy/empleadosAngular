@@ -1,19 +1,26 @@
-<form>
-  <input type="text" name="nombre" id="" [(ngModel)]="nombre">
-  <input type="text" name="apellido" id="" [(ngModel)]="apellido">
-  <input type="text" name="puesto" id="" [(ngModel)]="puesto">
-  <input type="number" name="salario" id="" [(ngModel)]="salario">
-  <button type="submit" (click)="registrarEmpleado()">Enviar</button>
-</form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="proyectos">Proyecto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quienes">Quienes somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<h2>2 Hijos que imprimen la lista de distinta manera</h2>
-
-<!-- <h3>Hijo opcion 1 </h3>
-<app-empleadoLista [empleados]="empleados"></app-empleadoLista> -->
-
-<h3>Hijo opcion 2 </h3>
-<app-EmpleadoHijo 
-  *ngFor="let empleado of empleados" 
-  [empleado]="empleado"
-  ></app-EmpleadoHijo>
-
+<router-outlet></router-outlet>

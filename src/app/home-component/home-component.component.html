@@ -1,0 +1,20 @@
+
+<form>
+  <input type="text" name="nombre" id="" [(ngModel)]="nombre">
+  <input type="text" name="apellido" id="" [(ngModel)]="apellido">
+  <input type="text" name="puesto" id="" [(ngModel)]="puesto">
+  <input type="number" name="salario" id="" [(ngModel)]="salario">
+  <button type="submit" (click)="registrarEmpleado()">Enviar</button>
+</form>
+
+<h2>2 Hijos que imprimen la lista de distinta manera</h2>
+
+<!-- <h3>Hijo opcion 1 </h3>
+<app-empleadoLista [empleados]="empleados"></app-empleadoLista> -->
+
+<h3>Hijo opcion 2 </h3>
+<app-EmpleadoHijo 
+  *ngFor="let empleado of empleados" 
+  [empleado]="empleado"
+  ></app-EmpleadoHijo>
+
