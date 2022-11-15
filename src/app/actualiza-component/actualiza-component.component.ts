@@ -12,7 +12,7 @@ export class ActualizaComponentComponent implements OnInit {
 
   empleados: Array<empleado>
   empleado: empleado;
-
+  accion: number;
   title = 'Empleados';
 
   indice: number;
@@ -30,6 +30,8 @@ export class ActualizaComponentComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.accion = Number(this.route.snapshot.queryParams['accion']);
+
     //Con esto extraigo de la url el id
     this.indice = this.route.snapshot.params["id"]
 
@@ -38,14 +40,36 @@ export class ActualizaComponentComponent implements OnInit {
     [this.nombre, this.apellido, this.puesto, this.salario] = [this.empleado.nombre, this.empleado.apellido, this.empleado.puesto, this.empleado.salario]
   }
 
-  actualizaEmpleado() {
-    let newempleado = new empleado(this.nombre, this.apellido, this.puesto, this.salario)
+  // actualizaEmpleado() {
+  //   let newempleado = new empleado(this.nombre, this.apellido, this.puesto, this.salario)
 
-    this.empleadosService.actualizarEmpleado(newempleado, this.indice)
+  //   this.empleadosService.actualizarEmpleado(newempleado, this.indice)
 
-    this.router.navigate([""])
+  //   this.router.navigate([""])
+  // }
+
+
+  // eliminaEmpleado() {
+  //   this.empleadosService.eliminarEmpleado(this.indice)
+
+  //   this.router.navigate([""])
+  // }
+
+  accionEmpleado() {
+    console.log(this.accion)
+    if (this.accion === 1){
+
+      let newempleado = new empleado(this.nombre, this.apellido, this.puesto, this.salario)
+      this.empleadosService.actualizarEmpleado(newempleado, this.indice)
+      this.router.navigate([""])
+
+    } else if (this.accion === 2) {
+
+      this.empleadosService.eliminarEmpleado(this.indice)
+      this.router.navigate([""])
+
+    }
   }
-
 
   volverHome() {
     this.router.navigate([""])

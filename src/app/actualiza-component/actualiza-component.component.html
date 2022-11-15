@@ -5,7 +5,9 @@
   <input type="text" name="apellido" id="" [(ngModel)]="apellido">
   <input type="text" name="puesto" id="" [(ngModel)]="puesto">
   <input type="number" name="salario" id="" [(ngModel)]="salario">
-  <button type="submit" (click)="actualizaEmpleado()">Editar</button>
+  <button type="submit" (click)="accionEmpleado()">{{accion === 1 ? "Editar" : "Eliminar"}}</button>
+  <!-- <button type="submit" (click)="actualizaEmpleado()">Editar</button>
+  <button type="submit" (click)="eliminaEmpleado()">Eliminar</button> -->
 </form>
 
 <div style="text-align: center;">

@@ -1,10 +1,14 @@
 <p >
-  <a [routerLink]="['/actualiza',indice]">
-    {{indice+1}}
-    {{empleado.nombre}}
-    {{empleado.apellido}}
-    {{empleado.puesto}}
-    {{empleado.salario}}
+  {{indice+1}}
+  {{empleado.nombre}}
+  {{empleado.apellido}}
+  {{empleado.puesto}}
+  {{empleado.salario}}
+  <a [routerLink]="['/actualiza',indice]" [queryParams]="{accion:'1'}">
+    Actualizar
+  </a>
+  <a [routerLink]="['/actualiza',indice]" [queryParams]="{accion:'2'}">
+    Eliminar
   </a>
 </p>
 
